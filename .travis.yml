@@ -1,0 +1,6 @@
+language: go
+install:
+  - go get github.com/vjeantet/eastertime
+script: go test -v
+notifications:
+  email: false

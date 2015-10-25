@@ -5,10 +5,6 @@ import (
 	"time"
 )
 
-const (
-	Day = 24 * time.Hour
-)
-
 var (
 	easterCache = make(map[int]*time.Time)
 	holidays    = &Holidays{Function: Holidays_DE_NRW}

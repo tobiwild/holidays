@@ -15,10 +15,10 @@ func Holidays_DE(year int) YearHolidays {
 
 	easter := easter(year)
 
-	result.addFromTime(easter.Add(Day), &Holiday{"Ostermontag"})
-	result.addFromTime(easter.Add(-2*Day), &Holiday{"Karfreitag"})
-	result.addFromTime(easter.Add(39*Day), &Holiday{"Christi Himmelfahrt"})
-	result.addFromTime(easter.Add(50*Day), &Holiday{"Pfingstmontag"})
+	result.addFromTime(easter.AddDate(0, 0, 1), &Holiday{"Ostermontag"})
+	result.addFromTime(easter.AddDate(0, 0, -2), &Holiday{"Karfreitag"})
+	result.addFromTime(easter.AddDate(0, 0, 39), &Holiday{"Christi Himmelfahrt"})
+	result.addFromTime(easter.AddDate(0, 0, 50), &Holiday{"Pfingstmontag"})
 
 	return result
 }
@@ -27,7 +27,7 @@ func Holidays_DE_NRW(year int) YearHolidays {
 	result := Holidays_DE(year)
 
 	result.add(&YearDay{time.November, 1}, &Holiday{"Allerheiligen"})
-	result.addFromTime(easter(year).Add(60*Day), &Holiday{"Fronleichnam"})
+	result.addFromTime(easter(year).AddDate(0, 0, 60), &Holiday{"Fronleichnam"})
 
 	return result
 }

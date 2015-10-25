@@ -27,7 +27,7 @@ func main() {
 	}
 
 	printHolidayInfo(date)
-	date = date.Add(Day)
+	date = date.AddDate(0, 0, 1)
 	printHolidayInfo(date)
 }
 

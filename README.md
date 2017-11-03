@@ -54,5 +54,6 @@ At the moment there are only these functions available:
 
 * Holidays_DE
 * Holidays_DE_NRW
+* HolidaysBR
 
 It would be nice to have some more. A good place to look is the [ruby holidays gem](https://github.com/holidays/holidays/tree/master/data).
